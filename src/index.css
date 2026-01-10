@@ -1,0 +1,60 @@
+:root {
+  /* Classic Barbershop Colors */
+  --color-red: #D32F2F;
+  /* Classic Fire Engine Red */
+  --color-red-hover: #B71C1C;
+  --color-white: #FFFFFF;
+  --color-off-white: #F5F5F5;
+  --color-black: #1a1a1a;
+  --color-grey: #424242;
+  --color-blue: #1976D2;
+  /* Barber Pole Blue */
+
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', serif;
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+
+  --border-radius: 4px;
+  --transition: all 0.3s ease;
+
+  --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-off-white);
+  color: var(--color-black);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+section {
+  position: relative;
+}

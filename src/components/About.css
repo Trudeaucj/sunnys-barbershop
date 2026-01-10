@@ -1,0 +1,95 @@
+.about-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--color-white);
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--color-black);
+    margin-bottom: var(--spacing-md);
+    border-left: 5px solid var(--color-red);
+    padding-left: 15px;
+}
+
+.about-content p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-grey);
+    font-size: 1.1rem;
+}
+
+.about-image-wrapper {
+    position: relative;
+    /* Ensure image container doesn't force bad cropping */
+    display: flex;
+    justify-content: center;
+}
+
+.about-image {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+    border: 5px solid var(--color-white);
+    outline: 1px solid #ddd;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    /* Allow natural aspect ratio to show full face */
+    max-height: 500px;
+    /* Cap visual height */
+    object-fit: contain;
+    /* OR cover if the aspect ratio is controlled, but contain/auto ensures full image */
+}
+
+.image-decoration {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-blue);
+    z-index: 1;
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .about-image-wrapper {
+        order: -1;
+        /* Show image FIRST on mobile? User asked for key info first, maybe keep text first? */
+        /* Actually, usually text first is good for info, but "Fix the image" implies they want to see it. 
+       Let's keep it below text for "info first" rule, or standard flow. 
+       Standard flow on mobile is top-down. Left col (Text) -> Right col (Image).
+       So Text will be first. */
+    }
+
+    .about-image {
+        max-height: 300px;
+        object-fit: cover;
+        /* On mobile specific crops might be okay, but user said "fix image". */
+        object-fit: contain;
+        /* Safer to show full content */
+        background: #f0f0f0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
