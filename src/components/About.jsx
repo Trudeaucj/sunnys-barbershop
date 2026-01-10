@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import heroImage from '../assets/hero-optimized.jpg';
 
 const About = () => {
     return (
@@ -19,7 +20,7 @@ const About = () => {
                     </p>
                 </div>
                 <div className="about-image-wrapper">
-                    <img src="/hero-optimized.jpg" alt="Sunny styling hair" className="about-image" />
+                    <img src={heroImage} alt="Sunny styling hair" className="about-image" />
                     <div className="image-decoration"></div>
                 </div>
             </div>
