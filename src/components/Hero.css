@@ -3,7 +3,7 @@
     height: 70vh;
     /* Reduced height for better mobile fold visibility */
     min-height: 400px;
-    background-image: url('../assets/interior.png');
+    background-image: url('/interior.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
