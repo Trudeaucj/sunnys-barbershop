@@ -1,42 +1,38 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App Layout */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App main {
+  flex: 1;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Barber pole decorative stripe - appears on left edge */
+.barber-stripe {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--sunny-red),
+    var(--sunny-red) 10px,
+    var(--warm-white) 10px,
+    var(--warm-white) 20px,
+    var(--sunny-blue) 20px,
+    var(--sunny-blue) 30px,
+    var(--warm-white) 30px,
+    var(--warm-white) 40px
+  );
+  z-index: 9999;
+  animation: barberPole 2s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .barber-stripe {
+    width: 5px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

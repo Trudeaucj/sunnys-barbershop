@@ -1,24 +1,22 @@
 import React from 'react';
-import InfoBar from './components/InfoBar';
+import './App.css';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import Gallery from './components/Gallery';
-import InstagramFeed from './components/InstagramFeed';
 import Reviews from './components/Reviews';
-import Info from './components/Info';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <InfoBar />
+      <div className="barber-stripe" aria-hidden="true" />
+      <Header />
       <main>
         <Hero />
         <About />
-        <Gallery />
-        <InstagramFeed />
         <Reviews />
-        <Info />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,131 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.5rem 2rem;
+  transition: all var(--transition-base);
+}
+
+.header--scrolled {
+  background: rgba(253, 246, 227, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header__name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
+}
+
+.header:not(.header--scrolled) .header__name {
+  color: var(--warm-white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header__nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.header__link {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--charcoal);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.header:not(.header--scrolled) .header__link {
+  color: var(--warm-white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--sunny-red);
+  transition: width var(--transition-base);
+}
+
+.header__link:hover::after {
+  width: 100%;
+}
+
+.header__contact {
+  display: flex;
+  align-items: center;
+}
+
+.header__cta {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: var(--sunny-red);
+  color: var(--warm-white);
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all var(--transition-fast);
+}
+
+.header__cta:hover {
+  background: var(--sunny-red-dark);
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .header--scrolled {
+    padding: 0.75rem 1rem;
+  }
+
+  .header__container {
+    padding-left: 0.5rem;
+  }
+
+  .header__name {
+    font-size: 1rem;
+  }
+
+  .header__cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+}

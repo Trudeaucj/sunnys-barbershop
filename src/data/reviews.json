@@ -1,20 +1,97 @@
-[
+{
+  "reviews": [
     {
-        "id": 1,
-        "text": "Took my 15 month old in for his first haircut today and could not have been happier with the experience and cut! Marty was super efficient and just so gentle and sweet with my son. Both him and Sunny were extremely kind and welcoming. Just good people who do good work.",
-        "author": "Makenna Hickman",
-        "rating": 5
+      "id": 1,
+      "text": "The barbers at Sunny’s Barbershop are amazing, kind, and welcoming. Their first come first served is always great because I can go and get a haircut at a time that works for me. I’ve been going there for 4 years consistently.",
+      "author": "C",
+      "rating": 5,
+      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJgs13WrzyrMQY5isk0dUfExk4U9qVIs46F9ZRtlUVYnicT28yS=s128-c0x00000000-cc-rp-mo-ba4",
+      "relative_time_description": "2 weeks ago"
     },
     {
-        "id": 2,
-        "text": "Sunny is the best. We have received many great haircuts over the years here and we decided to take our toddler in for his first barbershop haircut. Sunny handled the toddler wiggles like a pro and made it a really positive experience for him. We all love the haircut.",
-        "author": "Rose Morken",
-        "rating": 5
+      "id": 2,
+      "text": "Took my 15 month old in for his first haircut today and could not have been happier with the experience and cut! Marty was super efficient and just so gentle and sweet with my son. Both him and Sunny were extremely kind and welcoming. Just good people who do good work.",
+      "author": "Makenna Hickman",
+      "rating": 5,
+      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKQ7CyJ3PJ42-FEOVhgAdpZa0A2iraItNsypr0IQl79hXJztw=s128-c0x00000000-cc-rp-mo",
+      "relative_time_description": "2 months ago"
     },
     {
-        "id": 3,
-        "text": "Guinness is rescue dog that Sunny keeps around her shop. He shows love to everybody who comes in. Why? Because he’s been shown love in this place. And that’s what Sunny shows to everybody who walks in her door. I watched her and the staff offer dignity and respect to two of our “neighbors on the street” who came in for haircuts. To Sunny, there are no strays—just four legged and two legged friends. Oh, and her haircuts rock, too!",
-        "author": "Greg Smith",
-        "rating": 5
+      "id": 3,
+      "text": "Sunny is the best. We have received many great haircuts over the years here and we decided to take our toddler in for his first barbershop haircut. Sunny handled the toddler wiggles like a pro and made it a really positive experience for him. We all love the haircut.",
+      "author": "Rose Morken",
+      "rating": 5,
+      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjX9Mvp2_GMLqk2vO9yxvuQ1DHvOMyqM6kMf7pm-Sri_ESlgsTDJcg=s128-c0x00000000-cc-rp-mo-ba2",
+      "relative_time_description": "10 months ago"
+    },
+    {
+      "id": 4,
+      "text": "Marty is so kind with my boys (ages 3 and 5). Everyone is so nice and welcoming!  The boys cuts were perfect, exactly what we wanted.",
+      "author": "Ariel Markham",
+      "rating": 5,
+      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLhBfL7OdZc0qYAt6V2pP4gldVWsMMyNsSFRwcO72o9CIMk7g=s128-c0x00000000-cc-rp-mo",
+      "relative_time_description": "4 months ago"
+    },
+    {
+      "id": 5,
+      "text": "Guinness is rescue dog that Sunny keeps around her shop. He shows love to everybody who comes in. Why? Because he’s been shown love in this place. And that’s what Sunny shows to everybody who walks in her door. I watched her and the staff offer dignity and respect to two of our “neighbors on the street” who came in for haircuts. To Sunny, there are no strays—just four legged and two legged friends. Oh, and her haircuts rock, too!",
+      "author": "Greg Smith",
+      "rating": 5,
+      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjU6U8XA0IBdwKd602OhguEsjWHIebKV03sFzgxuwLLjMrd82dl4=s128-c0x00000000-cc-rp-mo",
+      "relative_time_description": "2 years ago"
     }
-]
+  ],
+  "photos": [
+    {
+      "filename": "review-photo-1.jpg",
+      "path": "review-photos/review-photo-1.jpg",
+      "attribution": "<a href=\"https://maps.google.com/maps/contrib/105112071758721499308\">Sunny&#39;s Barbershop</a>"
+    },
+    {
+      "filename": "review-photo-2.jpg",
+      "path": "review-photos/review-photo-2.jpg",
+      "attribution": "<a href=\"https://maps.google.com/maps/contrib/103012145459618327256\">Iker W</a>"
+    },
+    {
+      "filename": "review-photo-3.jpg",
+      "path": "review-photos/review-photo-3.jpg",
+      "attribution": "<a href=\"https://maps.google.com/maps/contrib/105112071758721499308\">Sunny&#39;s Barbershop</a>"
+    },
+    {
+      "filename": "review-photo-4.jpg",
+      "path": "review-photos/review-photo-4.jpg",
+      "attribution": "<a href=\"https://maps.google.com/maps/contrib/108490828183753612975\">Mary Elizabeth</a>"
+    },
+    {
+      "filename": "review-photo-5.jpg",
+      "path": "review-photos/review-photo-5.jpg",
+      "attribution": "<a href=\"https://maps.google.com/maps/contrib/109530866991385448732\">C</a>"
+    },
+    {
+      "filename": "review-photo-6.jpg",
+      "path": "review-photos/review-photo-6.jpg",
+      "attribution": "<a href=\"https://maps.google.com/maps/contrib/110208004746892010827\">Greg Smith</a>"
+    },
+    {
+      "filename": "review-photo-7.jpg",
+      "path": "review-photos/review-photo-7.jpg",
+      "attribution": "<a href=\"https://maps.google.com/maps/contrib/113208575957468515014\">Don Armstrong</a>"
+    },
+    {
+      "filename": "review-photo-8.jpg",
+      "path": "review-photos/review-photo-8.jpg",
+      "attribution": "<a href=\"https://maps.google.com/maps/contrib/118376297507426058270\">Silas Vignali</a>"
+    },
+    {
+      "filename": "review-photo-9.jpg",
+      "path": "review-photos/review-photo-9.jpg",
+      "attribution": "<a href=\"https://maps.google.com/maps/contrib/101797931227523543562\">G W</a>"
+    },
+    {
+      "filename": "review-photo-10.jpg",
+      "path": "review-photos/review-photo-10.jpg",
+      "attribution": "<a href=\"https://maps.google.com/maps/contrib/114601031980513799057\">Rose Morken</a>"
+    }
+  ],
+  "fetchedAt": "2026-01-24T06:22:45.201Z"
+}
