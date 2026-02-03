@@ -21,7 +21,7 @@ const About = () => {
             </p>
             <p>
               Whether you're after a fresh fade, a traditional trim, or just some good conversation,
-              Sunny and the team have you covered. And don't forget to say hello to <strong>Guinness</strong>,
+              Sunny and the team have you covered. And don't forget to say hello to <strong>Simon</strong>,
               our beloved shop dog who's always happy to see you.
             </p>
           </div>
