@@ -5,7 +5,10 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero__bg">
-        <img src="gallery/photo-2.jpg" alt="" className="hero__image" />
+        <picture>
+          <source srcSet="gallery/photo-2.webp" type="image/webp" />
+          <img src="gallery/photo-2.jpg" alt="" className="hero__image" />
+        </picture>
         <div className="hero__overlay" />
       </div>
 

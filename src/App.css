@@ -36,3 +36,9 @@
     width: 5px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .barber-stripe {
+    animation: none;
+  }
+}
