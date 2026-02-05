@@ -71,8 +71,15 @@ const About = () => {
           <div className="about__image-main">
             <img src="IMG_0054-optimized.jpg" alt="Sunny's Barbershop" />
           </div>
-          <div className="about__image-accent">
-            <img src="interior.jpg" alt="Inside Sunny's Barbershop" />
+          <div className="about__video-accent">
+            <video
+              src="simon-video.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-label="Simon the shop dog"
+            />
           </div>
         </div>
       </div>
