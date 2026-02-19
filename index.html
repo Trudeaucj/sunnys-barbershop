@@ -9,24 +9,30 @@
   <!-- SEO: Title & Meta -->
   <title>Sunny's Barbershop | Best Barber in Bellingham, WA | Haircuts, Fades & Beard Trims</title>
   <meta name="description"
-    content="Sunny's Barbershop at 810 Virginia St, Bellingham WA. 4.9★ rated with 200+ reviews. Walk-ins welcome Mon-Fri 9-5. Classic cuts, fades, kids haircuts, beard trims & hot lather shaves. Call (360) 733-9040." />
+    content="Sunny's Barbershop at 810 Virginia St, Bellingham WA. 4.9 stars with 200+ reviews. Walk-ins welcome Mon-Fri 9-5. Classic cuts, fades, kids haircuts, beard trims & hot lather shaves. Call (360) 733-9040." />
   <link rel="canonical" href="https://sunnysbarbershop.com/" />
+
+  <!-- Geo -->
   <meta name="geo.region" content="US-WA" />
   <meta name="geo.placename" content="Bellingham" />
+  <meta name="geo.position" content="48.7519;-122.4787" />
+  <meta name="ICBM" content="48.7519, -122.4787" />
 
   <!-- Open Graph -->
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Sunny's Barbershop | Bellingham, WA" />
   <meta property="og:description" content="Bellingham's top-rated barbershop. Classic cuts, fades, kids haircuts & beard trims. Walk-ins welcome Mon-Fri 9-5." />
   <meta property="og:image" content="https://sunnysbarbershop.com/gallery/photo-2.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://sunnysbarbershop.com/" />
-  <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Sunny's Barbershop" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sunny's Barbershop | Bellingham, WA" />
-  <meta name="twitter:description" content="Bellingham's top-rated barbershop. Classic cuts, fades, kids haircuts & beard trims. Walk-ins welcome." />
+  <meta name="twitter:description" content="Bellingham's top-rated barbershop. 4.9 stars, 200+ reviews. Walk-ins welcome." />
   <meta name="twitter:image" content="https://sunnysbarbershop.com/gallery/photo-2.jpg" />
 
   <!-- Fonts -->
@@ -35,11 +41,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="gallery/photo-2.webp" type="image/webp">
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD: BarberShop -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BarberShop",
+    "@id": "https://sunnysbarbershop.com/#barbershop",
     "name": "Sunny's Barbershop",
     "image": "https://sunnysbarbershop.com/gallery/photo-2.jpg",
     "url": "https://sunnysbarbershop.com",
@@ -68,9 +75,22 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "216"
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "216",
+      "ratingCount": "216"
     },
     "priceRange": "$20-$30",
+    "paymentAccepted": "Cash, Credit Card",
+    "currenciesAccepted": "USD",
+    "areaServed": {
+      "@type": "City",
+      "name": "Bellingham",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Washington"
+      }
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Barbershop Services",
@@ -79,71 +99,180 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Men's Haircut"
+            "name": "Haircut",
+            "description": "Classic men's haircut with consultation and styling"
+          },
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "20-30",
+            "priceCurrency": "USD"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Fade Haircut"
+            "name": "Fade Haircut",
+            "description": "Precision fade with blending and detailing"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Kids Haircut"
+            "name": "Kids Haircut",
+            "description": "Patient, gentle haircuts for children of all ages. First haircut certificates available."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Beard Trim"
+            "name": "Beard Trim",
+            "description": "Professional beard shaping and trim"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Hot Lather Shave"
+            "name": "Hot Lather Shave",
+            "description": "Traditional hot lather straight razor shave"
           }
         }
       ]
     },
     "sameAs": [
-      "https://www.yelp.com/biz/sunnys-barbershop-bellingham"
+      "https://www.yelp.com/biz/sunnys-barbershop-bellingham",
+      "https://nextdoor.com/pages/sunnys-barber-shop-bellingham-wa/"
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Walk-ins",
+        "value": "Welcome"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Wheelchair Accessible",
+        "value": "Yes"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Parking",
+        "value": "Private lot"
+      }
     ]
   }
   </script>
-  <script type="module" crossorigin src="./assets/index-DskbOy8z.js"></script>
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://sunnysbarbershop.com",
+    "name": "Sunny's Barbershop",
+    "description": "Bellingham's top-rated barbershop",
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "Sunny's Barbershop"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you accept walk-ins?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Walk-ins are always welcome. We operate on a first come, first served basis. Call (360) 733-9040 to check wait times."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a haircut cost at Sunny's Barbershop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Haircuts at Sunny's range from $20-$30 depending on the service. We offer men's cuts, fades, kids cuts, beard trims, and hot lather shaves."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you do kids haircuts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! Our barbers are experienced and patient with kids of all ages. We even offer 'My First Haircut' certificates for little ones."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are your hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're open Monday through Friday, 9:00 AM to 5:00 PM. We're closed on weekends."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Sunny's Barbershop located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're at 810 Virginia St, Bellingham, WA 98225. We have private lot parking and are wheelchair accessible."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="module" crossorigin src="./assets/index-BGcjeFWg.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-DZ36-uAx.css">
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root"><div class="App"><div class="barber-stripe" aria-hidden="true"></div><header class="header "><div class="header__container"><a href="#" class="header__brand"><span class="header__name">Sunny's</span></a><nav class="header__nav"><a href="#about" class="header__link">About</a><a href="#reviews" class="header__link">Reviews</a></nav><div class="header__contact"><a href="https://www.google.com/maps?q=Sunny%27s+Barbershop+810+Virginia+St+Bellingham+WA" target="_blank" rel="noopener noreferrer" class="header__cta">Directions</a></div></div></header><main><section class="hero"><div class="hero__bg"><picture><source srcset="gallery/photo-2.webp" type="image/webp"><img alt="Inside Sunny's Barbershop in Bellingham, WA" class="hero__image" src="gallery/photo-2.jpg"></picture><div class="hero__overlay"></div></div><div class="hero__content"><h1 class="hero__title">Sunny's Barbershop</h1><p class="hero__tagline">Classic cuts. Good company.<br>A neighborhood tradition.</p><div class="hero__info"><div class="hero__info-item"><span class="hero__info-label">Walk-ins Welcome</span><span class="hero__info-value">First Come, First Served</span></div><div class="hero__info-divider"></div><div class="hero__info-item"><span class="hero__info-label">Hours</span><span class="hero__info-value">Mon-Fri 9am-5pm</span></div></div><div class="hero__actions"><a href="https://www.google.com/maps?q=Sunny%27s+Barbershop+810+Virginia+St+Bellingham+WA" target="_blank" rel="noopener noreferrer" class="hero__btn hero__btn--primary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Get Directions</a><a href="tel:3607339040" class="hero__btn hero__btn--secondary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call Now</a></div></div><div class="hero__scroll"><span>Scroll</span><div class="hero__scroll-line"></div></div><div class="hero__address"><span>810 Virginia St</span></div></section><section id="about" class="about"><div class="about__pattern" aria-hidden="true"></div><div class="about__container"><div class="about__content"><span class="about__label">Welcome</span><h2 class="about__title">More Than<br><span>Just a Haircut</span></h2><div class="about__text"><p>Step into Sunny's and you'll find more than skilled barbers. You'll find a place where everyone's treated like family. Our classic red-and-white barbershop on Virginia Street has been a Bellingham fixture, serving generations of locals with quality haircuts and genuine warmth.</p><p>Whether you need a fresh fade, a men's haircut, a kids haircut, or a clean beard trim, Sunny and the team have you covered. We're proud to be one of the best barbers in Bellingham, WA, and we welcome walk-ins every weekday. No appointment needed.</p><p>And don't forget to say hello to <strong>Simon</strong>, our beloved shop dog who's always happy to see you.</p></div><div class="about__features"><div class="about__feature"><div class="about__feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg></div><div class="about__feature-text"><strong>No Appointments</strong><span>Walk in anytime we're open</span></div></div><div class="about__feature"><div class="about__feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div class="about__feature-text"><strong>Family Friendly</strong><span>All ages welcome</span></div></div><div class="about__feature"><div class="about__feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div><div class="about__feature-text"><strong>Community First</strong><span>Serving Bellingham with heart</span></div></div></div></div><div class="about__images"><div class="about__image-main"><picture><source srcset="IMG_0054-optimized.webp" type="image/webp"><img alt="Sunny's Barbershop interior on Virginia Street in Bellingham WA" loading="lazy" src="IMG_0054-optimized.jpg"></picture></div><div class="about__video-accent"></div></div></div></section><section id="reviews" class="reviews"><div class="reviews__container"><div class="reviews__header"><span class="reviews__label">Testimonials</span><h2 class="reviews__title">What People Say</h2><div class="reviews__rating"><div class="reviews__stars"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div><span class="reviews__rating-text">5.0 on Google</span></div></div><div class="reviews__photos"><div class="reviews__photo"><picture><source srcset="review-photos/review-photo-1.webp" type="image/webp"><img alt="Sunny's Barbershop Bellingham - customer photo 1" loading="lazy" src="review-photos/review-photo-1.jpg"></picture></div><div class="reviews__photo"><picture><source srcset="review-photos/review-photo-2.webp" type="image/webp"><img alt="Sunny's Barbershop Bellingham - customer photo 2" loading="lazy" src="review-photos/review-photo-2.jpg"></picture></div><div class="reviews__photo"><picture><source srcset="review-photos/review-photo-3.webp" type="image/webp"><img alt="Sunny's Barbershop Bellingham - customer photo 3" loading="lazy" src="review-photos/review-photo-3.jpg"></picture></div><div class="reviews__photo"><picture><source srcset="review-photos/review-photo-4.webp" type="image/webp"><img alt="Sunny's Barbershop Bellingham - customer photo 4" loading="lazy" src="review-photos/review-photo-4.jpg"></picture></div><div class="reviews__photo"><picture><source srcset="review-photos/review-photo-5.webp" type="image/webp"><img alt="Sunny's Barbershop Bellingham - customer photo 5" loading="lazy" src="review-photos/review-photo-5.jpg"></picture></div><div class="reviews__photo"><picture><source srcset="review-photos/review-photo-6.webp" type="image/webp"><img alt="Sunny's Barbershop Bellingham - customer photo 6" loading="lazy" src="review-photos/review-photo-6.jpg"></picture></div><div class="reviews__photo"><picture><source srcset="review-photos/review-photo-7.webp" type="image/webp"><img alt="Sunny's Barbershop Bellingham - customer photo 7" loading="lazy" src="review-photos/review-photo-7.jpg"></picture></div><div class="reviews__photo"><picture><source srcset="review-photos/review-photo-8.webp" type="image/webp"><img alt="Sunny's Barbershop Bellingham - customer photo 8" loading="lazy" src="review-photos/review-photo-8.jpg"></picture></div><div class="reviews__photo"><picture><source srcset="review-photos/review-photo-10.webp" type="image/webp"><img alt="Sunny's Barbershop Bellingham - customer photo 9" loading="lazy" src="review-photos/review-photo-10.jpg"></picture></div></div><div class="reviews__grid"><article class="review-card review-card--featured"><div class="review-card__quote">"</div><blockquote class="review-card__text">The barbers at Sunny’s Barbershop are amazing, kind, and welcoming. Their first come first served is always great because I can go and get a haircut at a time that works for me. I’ve been going there for 4 years consistently.</blockquote><footer class="review-card__footer"><div class="review-card__stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div><cite class="review-card__author">C</cite><span class="review-card__date">2 weeks ago</span></footer></article><article class="review-card "><div class="review-card__quote">"</div><blockquote class="review-card__text">Took my 15 month old in for his first haircut today and could not have been happier with the experience and cut! Marty was super efficient and just so gentle and sweet with my son. Both him and Sunny were extremely kind and welcoming. Just good people who do good work.</blockquote><footer class="review-card__footer"><div class="review-card__stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div><cite class="review-card__author">Makenna Hickman</cite><span class="review-card__date">2 months ago</span></footer></article><article class="review-card "><div class="review-card__quote">"</div><blockquote class="review-card__text">Sunny is the best. We have received many great haircuts over the years here and we decided to take our toddler in for his first barbershop haircut. Sunny handled the toddler wiggles like a pro and made it a really positive experience for him. We all love the haircut.</blockquote><footer class="review-card__footer"><div class="review-card__stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div><cite class="review-card__author">Rose Morken</cite><span class="review-card__date">10 months ago</span></footer></article><article class="review-card "><div class="review-card__quote">"</div><blockquote class="review-card__text">Marty is so kind with my boys (ages 3 and 5). Everyone is so nice and welcoming!  The boys cuts were perfect, exactly what we wanted.</blockquote><footer class="review-card__footer"><div class="review-card__stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div><cite class="review-card__author">Ariel Markham</cite><span class="review-card__date">4 months ago</span></footer></article><article class="review-card "><div class="review-card__quote">"</div><blockquote class="review-card__text">Simon is rescue dog that Sunny keeps around her shop. He shows love to everybody who comes in. Why? Because he’s been shown love in this place. And that’s what Sunny shows to everybody who walks in her door. I watched her and the staff offer dignity and respect to two of our “neighbors on the street” who came in for haircuts. To Sunny, there are no strays—just four legged and two legged friends. Oh, and her haircuts rock, too!</blockquote><footer class="review-card__footer"><div class="review-card__stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div><cite class="review-card__author">Greg Smith</cite><span class="review-card__date">2 years ago</span></footer></article></div><div class="reviews__cta"><a href="https://www.google.com/maps?q=Sunny%27s+Barbershop+810+Virginia+St+Bellingham+WA" target="_blank" rel="noopener noreferrer" class="reviews__cta-link">Read more reviews on Google<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"></path></svg></a></div></div></section></main><footer class="footer"><div class="footer__top"><div class="footer__container"><div class="footer__brand"><p class="footer__title">Sunny's Barbershop</p><p class="footer__tagline">A Bellingham tradition.<br>Quality cuts since day one.</p></div><div class="footer__info"><div class="footer__col"><h3 class="footer__heading">Visit Us</h3><address class="footer__address">810 Virginia St<br>Bellingham, WA 98225</address><a href="https://www.google.com/maps?q=Sunny%27s+Barbershop+810+Virginia+St+Bellingham+WA" target="_blank" rel="noopener noreferrer" class="footer__link">Get Directions<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"></path></svg></a></div><div class="footer__col"><h3 class="footer__heading">Hours</h3><ul class="footer__hours"><li><span>Monday - Friday</span><span>9am - 5pm</span></li><li><span>Saturday - Sunday</span><span>Closed</span></li></ul></div><div class="footer__col"><h3 class="footer__heading">Contact</h3><a href="tel:3607339040" class="footer__phone">(360) 733-9040</a><p class="footer__note">Walk-ins welcome.<br>No appointment needed.</p></div></div></div></div><div class="footer__bottom"><div class="footer__container"><p class="footer__copyright">© 2026 Sunny's Barbershop. All rights reserved.</p><p class="footer__made">Made with care in Bellingham, WA</p></div></div></footer></div></div>
 
   <!-- Static content for search engine crawlers and noscript -->
   <noscript>
     <div style="max-width:800px;margin:0 auto;padding:40px 20px;font-family:sans-serif;">
       <h1>Sunny's Barbershop - Bellingham's Favorite Barbershop</h1>
       <p>Welcome to Sunny's Barbershop, a top-rated walk-in barbershop in Bellingham, WA. Located at 810 Virginia St, we've been serving the Bellingham community with quality haircuts, fades, beard trims, and more.</p>
+
       <h2>Our Services</h2>
       <ul>
-        <li>Men's Haircuts - classic cuts and modern styles</li>
+        <li>Men's Haircuts ($20-$30) - classic cuts and modern styles</li>
         <li>Fade Haircuts - skin fades, mid fades, and taper fades</li>
         <li>Kids Haircuts - all ages welcome, "My First Haircut" certificates available</li>
-        <li>Beard Trims - shaping and grooming</li>
+        <li>Beard Trims - professional shaping and grooming</li>
         <li>Hot Lather Shaves - traditional straight razor shaves</li>
       </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <dl>
+        <dt>Do you accept walk-ins?</dt>
+        <dd>Yes! Walk-ins are always welcome. We operate on a first come, first served basis. Call (360) 733-9040 to check wait times.</dd>
+        <dt>How much does a haircut cost?</dt>
+        <dd>Haircuts at Sunny's range from $20-$30 depending on the service.</dd>
+        <dt>Do you do kids haircuts?</dt>
+        <dd>Absolutely! Our barbers are experienced and patient with kids of all ages. We even offer "My First Haircut" certificates.</dd>
+        <dt>What are your hours?</dt>
+        <dd>Monday through Friday, 9:00 AM to 5:00 PM. Closed weekends.</dd>
+      </dl>
+
       <h2>Visit Us</h2>
       <p><strong>Address:</strong> 810 Virginia St, Bellingham, WA 98225</p>
       <p><strong>Phone:</strong> <a href="tel:+13607339040">(360) 733-9040</a></p>
       <p><strong>Hours:</strong> Monday-Friday, 9am-5pm. Walk-ins welcome, no appointment needed.</p>
       <p><strong>Rating:</strong> 4.9 stars on Google with 200+ reviews</p>
+      <p><strong>Parking:</strong> Private lot available. Wheelchair accessible.</p>
+
       <h2>About Sunny's Barbershop</h2>
-      <p>Step into Sunny's and you'll find more than skilled barbers. You'll find a place where everyone's treated like family. Our classic red-and-white shop on Virginia Street has been a Bellingham fixture, serving generations of locals with quality cuts and genuine warmth. Whether you're looking for the best barber in Bellingham for a fresh fade, a traditional men's haircut, or a kids haircut, Sunny and the team have you covered.</p>
+      <p>Step into Sunny's and you'll find more than skilled barbers. You'll find a place where everyone's treated like family. Our classic red-and-white shop on Virginia Street has been a Bellingham fixture, serving generations of locals with quality cuts and genuine warmth. Whether you're looking for the best barber in Bellingham for a fresh fade, a traditional men's haircut, or a kids haircut, Sunny and the team have you covered. Don't forget to say hello to Simon, our beloved rescue shop dog.</p>
     </div>
   </noscript>
 
