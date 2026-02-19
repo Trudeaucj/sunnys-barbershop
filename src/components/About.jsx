@@ -37,12 +37,16 @@ const About = () => {
           <div className="about__text">
             <p>
               Step into Sunny's and you'll find more than skilled barbers. You'll find a place
-              where everyone's treated like family. Our classic red-and-white shop on Virginia Street
-              has been a Bellingham fixture, serving generations of locals with quality cuts and genuine warmth.
+              where everyone's treated like family. Our classic red-and-white barbershop on Virginia Street
+              has been a Bellingham fixture, serving generations of locals with quality haircuts and genuine warmth.
             </p>
             <p>
-              Whether you're after a fresh fade, a traditional trim, or just some good conversation,
-              Sunny and the team have you covered. And don't forget to say hello to <strong>Simon</strong>,
+              Whether you need a fresh fade, a men's haircut, a kids haircut, or a clean beard trim,
+              Sunny and the team have you covered. We're proud to be one of the best barbers in Bellingham, WA,
+              and we welcome walk-ins every weekday. No appointment needed.
+            </p>
+            <p>
+              And don't forget to say hello to <strong>Simon</strong>,
               our beloved shop dog who's always happy to see you.
             </p>
           </div>

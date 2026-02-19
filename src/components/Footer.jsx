@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer__top">
         <div className="footer__container">
           <div className="footer__brand">
-            <h2 className="footer__title">Sunny's Barbershop</h2>
+            <p className="footer__title">Sunny's Barbershop</p>
             <p className="footer__tagline">
               A Bellingham tradition.<br />
               Quality cuts since day one.
