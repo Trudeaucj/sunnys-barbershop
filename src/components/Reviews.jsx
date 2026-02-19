@@ -31,7 +31,7 @@ const Reviews = () => {
               <div key={index} className="reviews__photo">
                 <picture>
                   <source srcSet={photo.path.replace('.jpg', '.webp')} type="image/webp" />
-                  <img src={photo.path} alt={`Customer photo ${index + 1}`} loading="lazy" />
+                  <img src={photo.path} alt={`Sunny's Barbershop Bellingham - customer photo ${index + 1}`} loading="lazy" />
                 </picture>
               </div>
             ))}

@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero__bg">
         <picture>
           <source srcSet="gallery/photo-2.webp" type="image/webp" />
-          <img src="gallery/photo-2.jpg" alt="" className="hero__image" />
+          <img src="gallery/photo-2.jpg" alt="Inside Sunny's Barbershop in Bellingham, WA" className="hero__image" />
         </picture>
         <div className="hero__overlay" />
       </div>

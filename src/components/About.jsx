@@ -96,7 +96,7 @@ const About = () => {
           <div className="about__image-main">
             <picture>
               <source srcSet="IMG_0054-optimized.webp" type="image/webp" />
-              <img src="IMG_0054-optimized.jpg" alt="Sunny's Barbershop" loading="lazy" />
+              <img src="IMG_0054-optimized.jpg" alt="Sunny's Barbershop interior on Virginia Street in Bellingham WA" loading="lazy" />
             </picture>
           </div>
           <div className="about__video-accent" ref={videoRef}>

@@ -9,24 +9,30 @@
   <!-- SEO: Title & Meta -->
   <title>Sunny's Barbershop | Best Barber in Bellingham, WA | Haircuts, Fades & Beard Trims</title>
   <meta name="description"
-    content="Sunny's Barbershop at 810 Virginia St, Bellingham WA. 4.9★ rated with 200+ reviews. Walk-ins welcome Mon-Fri 9-5. Classic cuts, fades, kids haircuts, beard trims & hot lather shaves. Call (360) 733-9040." />
+    content="Sunny's Barbershop at 810 Virginia St, Bellingham WA. 4.9 stars with 200+ reviews. Walk-ins welcome Mon-Fri 9-5. Classic cuts, fades, kids haircuts, beard trims & hot lather shaves. Call (360) 733-9040." />
   <link rel="canonical" href="https://sunnysbarbershop.com/" />
+
+  <!-- Geo -->
   <meta name="geo.region" content="US-WA" />
   <meta name="geo.placename" content="Bellingham" />
+  <meta name="geo.position" content="48.7519;-122.4787" />
+  <meta name="ICBM" content="48.7519, -122.4787" />
 
   <!-- Open Graph -->
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Sunny's Barbershop | Bellingham, WA" />
   <meta property="og:description" content="Bellingham's top-rated barbershop. Classic cuts, fades, kids haircuts & beard trims. Walk-ins welcome Mon-Fri 9-5." />
   <meta property="og:image" content="https://sunnysbarbershop.com/gallery/photo-2.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://sunnysbarbershop.com/" />
-  <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Sunny's Barbershop" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sunny's Barbershop | Bellingham, WA" />
-  <meta name="twitter:description" content="Bellingham's top-rated barbershop. Classic cuts, fades, kids haircuts & beard trims. Walk-ins welcome." />
+  <meta name="twitter:description" content="Bellingham's top-rated barbershop. 4.9 stars, 200+ reviews. Walk-ins welcome." />
   <meta name="twitter:image" content="https://sunnysbarbershop.com/gallery/photo-2.jpg" />
 
   <!-- Fonts -->
@@ -35,11 +41,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="gallery/photo-2.webp" type="image/webp">
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD: BarberShop -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BarberShop",
+    "@id": "https://sunnysbarbershop.com/#barbershop",
     "name": "Sunny's Barbershop",
     "image": "https://sunnysbarbershop.com/gallery/photo-2.jpg",
     "url": "https://sunnysbarbershop.com",
@@ -68,9 +75,22 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "216"
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "216",
+      "ratingCount": "216"
     },
     "priceRange": "$20-$30",
+    "paymentAccepted": "Cash, Credit Card",
+    "currenciesAccepted": "USD",
+    "areaServed": {
+      "@type": "City",
+      "name": "Bellingham",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Washington"
+      }
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Barbershop Services",
@@ -79,41 +99,134 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Men's Haircut"
+            "name": "Haircut",
+            "description": "Classic men's haircut with consultation and styling"
+          },
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "20-30",
+            "priceCurrency": "USD"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Fade Haircut"
+            "name": "Fade Haircut",
+            "description": "Precision fade with blending and detailing"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Kids Haircut"
+            "name": "Kids Haircut",
+            "description": "Patient, gentle haircuts for children of all ages. First haircut certificates available."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Beard Trim"
+            "name": "Beard Trim",
+            "description": "Professional beard shaping and trim"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Hot Lather Shave"
+            "name": "Hot Lather Shave",
+            "description": "Traditional hot lather straight razor shave"
           }
         }
       ]
     },
     "sameAs": [
-      "https://www.yelp.com/biz/sunnys-barbershop-bellingham"
+      "https://www.yelp.com/biz/sunnys-barbershop-bellingham",
+      "https://nextdoor.com/pages/sunnys-barber-shop-bellingham-wa/"
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Walk-ins",
+        "value": "Welcome"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Wheelchair Accessible",
+        "value": "Yes"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Parking",
+        "value": "Private lot"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://sunnysbarbershop.com",
+    "name": "Sunny's Barbershop",
+    "description": "Bellingham's top-rated barbershop",
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "Sunny's Barbershop"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you accept walk-ins?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Walk-ins are always welcome. We operate on a first come, first served basis. Call (360) 733-9040 to check wait times."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a haircut cost at Sunny's Barbershop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Haircuts at Sunny's range from $20-$30 depending on the service. We offer men's cuts, fades, kids cuts, beard trims, and hot lather shaves."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you do kids haircuts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! Our barbers are experienced and patient with kids of all ages. We even offer 'My First Haircut' certificates for little ones."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are your hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're open Monday through Friday, 9:00 AM to 5:00 PM. We're closed on weekends."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Sunny's Barbershop located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're at 810 Virginia St, Bellingham, WA 98225. We have private lot parking and are wheelchair accessible."
+        }
+      }
     ]
   }
   </script>
@@ -127,21 +240,37 @@
     <div style="max-width:800px;margin:0 auto;padding:40px 20px;font-family:sans-serif;">
       <h1>Sunny's Barbershop - Bellingham's Favorite Barbershop</h1>
       <p>Welcome to Sunny's Barbershop, a top-rated walk-in barbershop in Bellingham, WA. Located at 810 Virginia St, we've been serving the Bellingham community with quality haircuts, fades, beard trims, and more.</p>
+
       <h2>Our Services</h2>
       <ul>
-        <li>Men's Haircuts - classic cuts and modern styles</li>
+        <li>Men's Haircuts ($20-$30) - classic cuts and modern styles</li>
         <li>Fade Haircuts - skin fades, mid fades, and taper fades</li>
         <li>Kids Haircuts - all ages welcome, "My First Haircut" certificates available</li>
-        <li>Beard Trims - shaping and grooming</li>
+        <li>Beard Trims - professional shaping and grooming</li>
         <li>Hot Lather Shaves - traditional straight razor shaves</li>
       </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <dl>
+        <dt>Do you accept walk-ins?</dt>
+        <dd>Yes! Walk-ins are always welcome. We operate on a first come, first served basis. Call (360) 733-9040 to check wait times.</dd>
+        <dt>How much does a haircut cost?</dt>
+        <dd>Haircuts at Sunny's range from $20-$30 depending on the service.</dd>
+        <dt>Do you do kids haircuts?</dt>
+        <dd>Absolutely! Our barbers are experienced and patient with kids of all ages. We even offer "My First Haircut" certificates.</dd>
+        <dt>What are your hours?</dt>
+        <dd>Monday through Friday, 9:00 AM to 5:00 PM. Closed weekends.</dd>
+      </dl>
+
       <h2>Visit Us</h2>
       <p><strong>Address:</strong> 810 Virginia St, Bellingham, WA 98225</p>
       <p><strong>Phone:</strong> <a href="tel:+13607339040">(360) 733-9040</a></p>
       <p><strong>Hours:</strong> Monday-Friday, 9am-5pm. Walk-ins welcome, no appointment needed.</p>
       <p><strong>Rating:</strong> 4.9 stars on Google with 200+ reviews</p>
+      <p><strong>Parking:</strong> Private lot available. Wheelchair accessible.</p>
+
       <h2>About Sunny's Barbershop</h2>
-      <p>Step into Sunny's and you'll find more than skilled barbers. You'll find a place where everyone's treated like family. Our classic red-and-white shop on Virginia Street has been a Bellingham fixture, serving generations of locals with quality cuts and genuine warmth. Whether you're looking for the best barber in Bellingham for a fresh fade, a traditional men's haircut, or a kids haircut, Sunny and the team have you covered.</p>
+      <p>Step into Sunny's and you'll find more than skilled barbers. You'll find a place where everyone's treated like family. Our classic red-and-white shop on Virginia Street has been a Bellingham fixture, serving generations of locals with quality cuts and genuine warmth. Whether you're looking for the best barber in Bellingham for a fresh fade, a traditional men's haircut, or a kids haircut, Sunny and the team have you covered. Don't forget to say hello to Simon, our beloved rescue shop dog.</p>
     </div>
   </noscript>
 
