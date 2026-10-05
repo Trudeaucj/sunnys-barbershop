@@ -1,16 +1,43 @@
-# React + Vite
+# Sunny's Barbershop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website for Sunny's Barbershop in Bellingham, WA, live at [sunnysbarbershop.com](https://sunnysbarbershop.com).
 
-Currently, two official plugins are available:
+It's a single-page React app built with Vite, prerendered at build time for search engines, and hosted on GitHub Pages.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting started
 
-## React Compiler
+```sh
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The dev server runs at http://localhost:5173 with hot reload.
 
-## Expanding the ESLint configuration
+## Scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the Vite dev server |
+| `npm run build` | Build to `dist/`, then prerender the page with Puppeteer (`scripts/prerender.js`) |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run fetch-reviews` | Refresh Google reviews and photos (see below) |
+| `npm run deploy` | Fetch reviews, build, and publish `dist/` to GitHub Pages |
+
+## Google reviews
+
+`scripts/fetch-reviews.js` pulls reviews and up to 10 photos from the Google Places API. It writes `src/data/reviews.json` and saves photos to `public/review-photos/`. It needs two variables in a `.env` file (ignored by git):
+
+```sh
+GOOGLE_MAPS_API_KEY=...
+GOOGLE_PLACE_ID=...
+```
+
+Without them the script prints a warning and leaves the existing data alone.
+
+## Project layout
+
+- `src/components/` holds the page sections (Header, Hero, About, Reviews, Footer), each with its own CSS file.
+- `src/data/reviews.json` is the review data shown on the site.
+- `public/` is copied as-is into the build: images, the About video, `CNAME`, `robots.txt` and `sitemap.xml`.
+- `index.html` carries the meta tags, Open Graph tags and structured data used for SEO.
