@@ -1,7 +1,10 @@
 import React from 'react';
 import './Hero.css';
+import useShopStatus from '../hooks/useShopStatus';
 
 const Hero = () => {
+  const status = useShopStatus();
+
   return (
     <section className="hero">
       <div className="hero__bg">
@@ -13,6 +16,14 @@ const Hero = () => {
       </div>
 
       <div className="hero__content">
+        <div className="hero__badges">
+          <span className={`hero__status ${status ? (status.isOpen ? 'hero__status--open' : 'hero__status--closed') : ''}`}>
+            <span className="hero__status-dot" aria-hidden="true" />
+            {status ? `${status.label} · ${status.detail}` : 'Walk-ins welcome · Mon–Fri 9am–5pm'}
+          </span>
+          <span className="hero__award">★ Best of 2025 Barber Shop · BusinessRate</span>
+        </div>
+
         <h1 className="hero__title">Sunny's Barbershop</h1>
 
         <p className="hero__tagline">

@@ -3,8 +3,13 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Services from './components/Services';
+import Gallery from './components/Gallery';
 import Reviews from './components/Reviews';
+import Visit from './components/Visit';
 import Footer from './components/Footer';
+import PoleBand from './components/PoleBand';
+import MobileBar from './components/MobileBar';
 
 function App() {
   return (
@@ -13,10 +18,16 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <PoleBand />
         <About />
+        <Services />
+        <Gallery />
         <Reviews />
+        <PoleBand />
+        <Visit />
       </main>
       <Footer />
+      <MobileBar />
     </div>
   );
 }
