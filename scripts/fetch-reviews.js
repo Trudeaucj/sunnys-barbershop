@@ -22,13 +22,14 @@ async function fetchReviews() {
     try {
         console.log(`Fetching reviews and photos for Place ID: ${PLACE_ID}...`);
         const response = await axios.get(
-            `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,photos&key=${GOOGLE_MAPS_API_KEY}`
+            `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=rating,user_ratings_total,reviews,photos&key=${GOOGLE_MAPS_API_KEY}`
         );
 
         if (response.data.status !== 'OK') {
             throw new Error(`API Error: ${response.data.status} - ${response.data.error_message || 'No details'}`);
         }
 
+        const { rating, user_ratings_total: ratingCount } = response.data.result;
         const reviews = response.data.result.reviews || [];
         const photos = response.data.result.photos || [];
 
@@ -74,15 +75,20 @@ async function fetchReviews() {
             relative_time_description: review.relative_time_description
         }));
 
-        // Save reviews with photos metadata
+        // Keep the previous rating if Google didn't return one, so the build never loses it
+        const previousData = JSON.parse(await fs.readFile(OUTPUT_FILE, 'utf-8').catch(() => '{}'));
+
+        // Save overall rating, reviews, and photos metadata
         const outputData = {
+            rating: rating ?? previousData.rating,
+            ratingCount: ratingCount ?? previousData.ratingCount,
             reviews: formattedReviews,
             photos: downloadedPhotos,
             fetchedAt: new Date().toISOString()
         };
 
         await fs.writeFile(OUTPUT_FILE, JSON.stringify(outputData, null, 2));
-        console.log(`✅  Successfully fetched ${formattedReviews.length} reviews and ${downloadedPhotos.length} photos to ${OUTPUT_FILE}`);
+        console.log(`✅  Successfully fetched rating ${outputData.rating} (${outputData.ratingCount} reviews), ${formattedReviews.length} reviews and ${downloadedPhotos.length} photos to ${OUTPUT_FILE}`);
 
     } catch (error) {
         console.error('❌  Error fetching reviews:', error.message);

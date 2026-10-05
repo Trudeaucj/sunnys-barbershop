@@ -1,6 +1,7 @@
 import React from 'react';
 import './Reviews.css';
 import reviewsDataRaw from '../data/reviews.json';
+import { googleRating, formatRating } from '../data/googleRating';
 
 // Handle both old array format and new object format
 const reviews = Array.isArray(reviewsDataRaw) ? reviewsDataRaw : reviewsDataRaw.reviews;
@@ -21,7 +22,9 @@ const Reviews = () => {
                 </svg>
               ))}
             </div>
-            <span className="reviews__rating-text">5.0 on Google</span>
+            {googleRating.rating != null && (
+              <span className="reviews__rating-text">{formatRating(googleRating.rating)} on Google</span>
+            )}
           </div>
         </div>
 
