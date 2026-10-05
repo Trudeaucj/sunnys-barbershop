@@ -1,0 +1,130 @@
+.menu {
+  position: relative;
+  padding: calc(var(--space-xl) + 20px) var(--space-md) var(--space-xl);
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.menu__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.menu__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 4.5vw, 3.75rem);
+  line-height: 1.05;
+  color: var(--charcoal);
+  margin: 0.75rem 0 1.5rem;
+  text-wrap: balance;
+}
+
+.menu__intro p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 34rem;
+  margin-bottom: 1rem;
+}
+
+.menu__aside {
+  font-family: var(--font-hand);
+  font-weight: 600;
+  font-size: 1.65rem !important;
+  line-height: 1.25;
+  color: var(--sunny-blue-dark) !important;
+  transform: rotate(-1.5deg);
+  margin-top: 1.5rem;
+}
+
+/* Letterboard: oak frame around black grooved felt */
+.letterboard {
+  justify-self: center;
+  width: 100%;
+  max-width: 470px;
+  padding: 18px;
+  border-radius: 6px;
+  background:
+    repeating-linear-gradient(92deg, rgba(255, 255, 255, 0.06) 0 2px, transparent 2px 9px),
+    linear-gradient(135deg, var(--oak) 0%, var(--oak-dark) 100%);
+  box-shadow:
+    inset 0 0 0 2px rgba(0, 0, 0, 0.25),
+    0 30px 60px rgba(0, 0, 0, 0.3);
+  transform: rotate(1.2deg);
+}
+
+.letterboard__felt {
+  padding: 2rem 1.5rem;
+  background:
+    repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 7px),
+    var(--felt);
+  box-shadow: inset 0 4px 14px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.letterboard__line {
+  font-family: var(--font-sign);
+  font-weight: 500;
+  font-size: 1.55rem;
+  line-height: 1.55;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #F4F1EA;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9);
+}
+
+/* Plastic letters never sit perfectly straight */
+.letterboard__line:nth-child(3n) { transform: rotate(-0.6deg); }
+.letterboard__line:nth-child(3n + 1) { transform: rotate(0.5deg) translateX(2px); }
+
+.letterboard__line--title {
+  font-size: 2.3rem;
+  letter-spacing: 0.22em;
+}
+
+.letterboard__line--rule {
+  font-size: 1rem;
+  letter-spacing: 0.6em;
+  color: rgba(244, 241, 234, 0.5);
+}
+
+.letterboard__line--red {
+  color: #FF5A5A;
+}
+
+.letterboard__line--small {
+  font-size: 1.15rem;
+}
+
+@media (max-width: 900px) {
+  .menu__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    padding: calc(var(--space-lg) + 20px) var(--space-sm) var(--space-lg);
+  }
+
+  .letterboard {
+    padding: 12px;
+  }
+
+  .letterboard__felt {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .letterboard__line {
+    font-size: 1.2rem;
+  }
+
+  .letterboard__line--title {
+    font-size: 1.8rem;
+  }
+}

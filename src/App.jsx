@@ -2,13 +2,12 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Gallery from './components/Gallery';
+import MenuBoard from './components/MenuBoard';
+import Chairs from './components/Chairs';
+import SimonsCorner from './components/SimonsCorner';
 import Reviews from './components/Reviews';
-import Visit from './components/Visit';
+import FindUs from './components/FindUs';
 import Footer from './components/Footer';
-import PoleBand from './components/PoleBand';
 import MobileBar from './components/MobileBar';
 
 function App() {
@@ -18,14 +17,13 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <PoleBand />
-        <About />
-        <Services />
-        <Gallery />
+        <MenuBoard />
+        <Chairs />
+        <SimonsCorner />
         <Reviews />
-        <PoleBand />
-        <Visit />
+        <FindUs />
       </main>
+      <div className="awning" aria-hidden="true" />
       <Footer />
       <MobileBar />
     </div>

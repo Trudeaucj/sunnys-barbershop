@@ -1,0 +1,188 @@
+.chairs {
+  position: relative;
+  padding: var(--space-xl) var(--space-md) var(--space-lg);
+  background: radial-gradient(ellipse at 50% 0%, #2f2b28 0%, var(--charcoal) 60%);
+  color: var(--warm-white);
+  overflow: hidden;
+}
+
+/* The shop's checkered floor, laid out in perspective under the photos */
+.chairs__floor {
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  bottom: -10%;
+  height: 70%;
+  background-color: #E9E4D8;
+  background-image:
+    linear-gradient(45deg, #151515 25%, transparent 25%, transparent 75%, #151515 75%),
+    linear-gradient(45deg, #151515 25%, transparent 25%, transparent 75%, #151515 75%);
+  background-size: 120px 120px;
+  background-position: 0 0, 60px 60px;
+  transform: perspective(700px) rotateX(62deg);
+  transform-origin: 50% 100%;
+  mask-image: linear-gradient(to top, black 30%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to top, black 30%, transparent 95%);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.chairs__container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.chairs__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 4.5vw, 3.75rem);
+  line-height: 1.05;
+  margin: 0.75rem 0 1.5rem;
+  text-wrap: balance;
+}
+
+.chairs__story p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1rem;
+  max-width: 38rem;
+}
+
+.chairs__facts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+/* Styled like the paper number tickets barbershops hand out */
+.chairs__facts li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 1.2rem 0.6rem 1.4rem;
+  background: var(--paper);
+  color: var(--charcoal);
+  border-left: 6px solid var(--sunny-red);
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 94% 50%, 100% 70%, 100% 100%, 0 100%);
+  padding-right: 2rem;
+}
+
+.chairs__facts li:nth-child(2) {
+  border-left-color: var(--sunny-blue);
+}
+
+.chairs__facts strong {
+  font-family: var(--font-sign);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.chairs__facts span {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.chairs__portrait {
+  position: relative;
+  padding: 14px 14px 56px;
+  background: var(--paper);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  transform: rotate(2.5deg);
+}
+
+.chairs__portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.chairs__portrait figcaption,
+.snapshot figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  text-align: center;
+  font-family: var(--font-hand);
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--charcoal);
+}
+
+.chairs__snapshots {
+  position: relative;
+  max-width: 1300px;
+  margin: var(--space-xl) auto 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+  padding-bottom: var(--space-md);
+}
+
+.snapshot {
+  position: relative;
+  padding: 8px 8px 40px;
+  background: var(--paper);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+  transition: transform var(--transition-base);
+}
+
+.snapshot:nth-child(odd) { transform: rotate(-3deg) translateY(10px); }
+.snapshot:nth-child(even) { transform: rotate(2.5deg); }
+.snapshot:nth-child(3) { transform: rotate(-1deg) translateY(-6px); }
+
+.snapshot:hover {
+  transform: rotate(0) translateY(-10px) scale(1.06);
+  z-index: 2;
+}
+
+.snapshot img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.snapshot figcaption {
+  font-size: 1.2rem;
+  bottom: 6px;
+}
+
+@media (max-width: 900px) {
+  .chairs__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .chairs__portrait {
+    max-width: 420px;
+    justify-self: center;
+  }
+
+  .chairs__snapshots {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .chairs {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .chairs__snapshots {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0.9rem;
+    margin-top: var(--space-lg);
+  }
+
+  .snapshot figcaption {
+    font-size: 1.05rem;
+  }
+}
