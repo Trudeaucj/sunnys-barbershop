@@ -12,18 +12,8 @@
   --text-muted: #5A5A5A;
 
   /* Typography */
-  --font-display: 'Ultra', 'Rockwell Extra Bold', 'Arial Black', serif;
-  --font-sign: 'Oswald', 'Arial Narrow', 'Helvetica Neue', sans-serif;
-  --font-hand: 'Caveat', 'Bradley Hand', cursive;
+  --font-display: 'Archivo Black', sans-serif;
   --font-body: 'Crimson Pro', Georgia, serif;
-
-  /* Shop materials */
-  --felt: #141414;
-  --oak: #8A5A2B;
-  --oak-dark: #5C3A1A;
-  --chrome: #C9CED6;
-  --paper: #FFFDF6;
-  --note: #FFF4B8;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -58,39 +48,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-}
-
-/* Red-and-white awning with scalloped edge, like the one over the shop's front door */
-.awning {
-  position: relative;
-  height: 34px;
-  background: repeating-linear-gradient(90deg, var(--sunny-red) 0 40px, var(--warm-white) 40px 80px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
-  z-index: 3;
-}
-
-.awning::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  height: 20px;
-  background:
-    radial-gradient(circle at 20px 0, var(--sunny-red) 19.5px, transparent 20.5px) 0 0 / 80px 20px repeat-x,
-    radial-gradient(circle at 60px 0, var(--warm-white) 19.5px, transparent 20.5px) 0 0 / 80px 20px repeat-x;
-  filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.15));
-}
-
-/* Shared section eyebrow, styled like a painted window label */
-.eyebrow {
-  display: inline-block;
-  font-family: var(--font-sign);
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  color: var(--sunny-red);
 }
 
 /* Checkered pattern utility */

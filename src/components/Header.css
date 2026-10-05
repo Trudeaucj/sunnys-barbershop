@@ -4,16 +4,15 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1.25rem 2rem 1.25rem 2.5rem;
+  padding: 1.5rem 2rem;
   transition: all var(--transition-base);
 }
 
 .header--scrolled {
-  background: rgba(20, 20, 20, 0.92);
+  background: rgba(253, 246, 227, 0.95);
   backdrop-filter: blur(10px);
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 
 .header__container {
@@ -22,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  padding-left: 1rem;
 }
 
 .header__brand {
@@ -32,35 +31,43 @@
 }
 
 .header__logo {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: var(--warm-white);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header__name {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
+}
+
+.header:not(.header--scrolled) .header__name {
   color: var(--warm-white);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header__nav {
   display: flex;
-  gap: 2.25rem;
+  gap: 2.5rem;
 }
 
 .header__link {
-  font-family: var(--font-sign);
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--warm-white);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.1em;
+  color: var(--charcoal);
   position: relative;
-  padding: 0.4rem 0;
+  padding: 0.5rem 0;
+}
+
+.header:not(.header--scrolled) .header__link {
+  color: var(--warm-white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header__link::after {
@@ -69,34 +76,48 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 3px;
-  background: repeating-linear-gradient(-45deg, var(--sunny-red) 0 4px, var(--warm-white) 4px 8px, var(--sunny-blue) 8px 12px, var(--warm-white) 12px 16px);
+  height: 2px;
+  background: var(--sunny-red);
   transition: width var(--transition-base);
 }
 
-.header__link:hover::after,
-.header__link:focus-visible::after {
+.header__link:hover::after {
   width: 100%;
 }
 
+.header__contact {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.header__phone {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--charcoal);
+}
+
+.header:not(.header--scrolled) .header__phone {
+  color: var(--warm-white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header__phone:hover {
+  color: var(--sunny-red);
+}
+
 .header__cta {
-  font-family: var(--font-sign);
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  padding: 0.6rem 1.1rem;
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
   background: var(--sunny-red);
   color: var(--warm-white);
   border-radius: 4px;
-  box-shadow: 0 4px 14px rgba(214, 40, 40, 0.35);
-  transition: background var(--transition-fast), transform var(--transition-fast);
-}
-
-.header__cta-label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  margin-right: 0.35rem;
-  opacity: 0.8;
+  letter-spacing: 0.1em;
+  transition: all var(--transition-fast);
 }
 
 .header__cta:hover {
@@ -104,7 +125,14 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 1000px) {
+/* Mobile */
+@media (max-width: 1100px) {
+  .header__phone {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
   .header__nav {
     display: none;
   }
@@ -112,24 +140,28 @@
 
 @media (max-width: 600px) {
   .header {
-    padding: 0.85rem 1rem 0.85rem 1.25rem;
+    padding: 1rem;
   }
 
-  .header__logo {
-    width: 36px;
-    height: 36px;
+  .header--scrolled {
+    padding: 0.75rem 1rem;
+  }
+
+  .header__container {
+    padding-left: 0.5rem;
   }
 
   .header__name {
-    font-size: 1.15rem;
+    font-size: 1rem;
+  }
+
+  .header__logo {
+    width: 32px;
+    height: 32px;
   }
 
   .header__cta {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.8rem;
-  }
-
-  .header__cta-label {
-    display: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
   }
 }

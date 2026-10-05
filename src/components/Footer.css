@@ -5,7 +5,7 @@
 
 .footer__top {
   padding: var(--space-xl) var(--space-md);
-  padding-top: calc(var(--space-xl) + 20px);
+  border-top: 4px solid var(--sunny-red);
 }
 
 .footer__container {
@@ -48,7 +48,7 @@
 }
 
 .footer__heading {
-  font-family: var(--font-sign);
+  font-family: var(--font-display);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -108,7 +108,7 @@
 
 .footer__phone {
   display: block;
-  font-family: var(--font-sign);
+  font-family: var(--font-display);
   font-size: 1.25rem;
   color: var(--warm-white);
   margin-bottom: var(--space-sm);
