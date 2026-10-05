@@ -1,4 +1,6 @@
 {
+  "rating": 4.9,
+  "ratingCount": 216,
   "reviews": [
     {
       "id": 1,
@@ -82,7 +84,7 @@
       "path": "review-photos/review-photo-8.jpg",
       "attribution": "<a href=\"https://maps.google.com/maps/contrib/118376297507426058270\">Silas Vignali</a>"
     },
-        {
+    {
       "filename": "review-photo-10.jpg",
       "path": "review-photos/review-photo-10.jpg",
       "attribution": "<a href=\"https://maps.google.com/maps/contrib/114601031980513799057\">Rose Morken</a>"
